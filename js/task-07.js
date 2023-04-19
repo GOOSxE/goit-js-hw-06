@@ -1,10 +1,13 @@
-const rangeInputRef = document.querySelector('#font-size-control')
-const textToChangeRef = document.querySelector('#text')
+// *
+const rangeInputRef = document.querySelector("#font-size-control");
+const textToChangeRef = document.querySelector("#text");
+
+function fontSizeMaker() {
+  textToChangeRef.style.fontSize = `${rangeInputRef.value}px`;
+}
 // *
 
-rangeInputRef.addEventListener('input', onRangeChange)
+fontSizeMaker();
 
-function onRangeChange(event) {
-    textToChangeRef.style.fontSize = `${event.currentTarget.value}px`
-}
+rangeInputRef.addEventListener("input", fontSizeMaker);
 // *

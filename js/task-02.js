@@ -8,19 +8,19 @@ const ingredients = [
 ];
 // *
 
-const newArray = [];
+const listUrl = document.querySelector('#ingredients')
 
-ingredients.forEach(ingredient => {
+const newIngredients = ingredients.map(ingredient => {
   const newLiUrl = document.createElement("li");
   newLiUrl.textContent = `${ingredient}`;
   newLiUrl.classList = 'item'
-  newArray.push(newLiUrl);
+
+  return newLiUrl
 });
-// console.log(newArray)
+
+listUrl.append(...newIngredients)
 // *
 
-const listUrl = document.querySelector('#ingredients')
 
-for (const item of newArray) {
-  listUrl.append(item)
-}
+
+

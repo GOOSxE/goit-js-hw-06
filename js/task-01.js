@@ -9,6 +9,6 @@ const itemsUrl = document.querySelectorAll('.item')
 
 itemsUrl.forEach( item => {
     console.log(`Category: ${item.firstElementChild.textContent}`)
-    console.log(`Elements: ${item.querySelectorAll("li").length}`)
+    console.log(`Elements: ${item.lastElementChild.children.length}`)
 })
 
